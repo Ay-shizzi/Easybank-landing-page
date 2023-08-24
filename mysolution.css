@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+:root {
+  ---Dark-Blue: hsl(233, 26%, 24%);
+  ---Lime-Green: hsl(136, 65%, 51%);
+  ---Bright-Cyan: hsl(192, 70%, 51%);
+  ---Grayish-Blue: hsl(233, 8%, 62%);
+  ---Light-Grayish-Blue: hsl(220, 16%, 96%);
+  ---Very-Light-Gray: hsl(0, 0%, 98%);
+  ---White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Public Sans", sans-serif;
+}
+.container {
+  overflow-x: clip;
+}
+/* navbar starts */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(---White);
+  height: 50px;
+  position: relative;
+  z-index: 3;
+}
+#hamburger {
+  display: none;
+}
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+  margin-top: 5px;
+}
+.menu li a {
+  text-decoration: none;
+  color: var(---Grayish-Blue);
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+.menu li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-top: 10px;
+  background: var(---Lime-Green);
+  transition: width 0.4s ease-in;
+}
+.menu li a:hover::after {
+  width: 100%;
+}
+.request-btn a {
+  text-decoration: none;
+  color: var(---White);
+  background: linear-gradient(90deg, var(---Lime-Green), var(---Bright-Cyan));
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.request-btn a:hover {
+  filter: brightness(120%);
+}
+/* navbar ends */
+
+/* invite section start */
+.invite-section {
+  display: flex;
+  position: relative;
+  padding: 5% 10%;
+  background-color: var(---Very-Light-Gray);
+}
+.invite-text {
+  width: 35%;
+}
+.invite-header {
+  font-size: 2.5em;
+  font-weight: 300;
+}
+.invite-paragraph {
+  margin: 2.5em auto;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: var(---Grayish-Blue);
+}
+.invite-btn {
+  padding: 1em 2em;
+  border: none;
+  outline: none;
+  border-radius: 2em;
+  color: white;
+  background: linear-gradient(90deg, var(---Lime-Green), var(---Bright-Cyan));
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.invite-btn:hover {
+  filter: brightness(120%);
+}
+.invite-bg {
+  position: absolute;
+  right: -210px;
+  top: -235px;
+  height: 50em;
+}
+.invite-mockup {
+  position: absolute;
+  right: -100px;
+  top: -115px;
+  height: 50em;
+}
+/* invite section end */
+
+/* easy bank section start*/
+.easy-bank {
+  background-color: var(---Light-Grayish-Blue);
+  padding: 5% 10%;
+}
+.easy-bank_header {
+  font-size: 2.5em;
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+.easy-bank_paragraph {
+  font-size: 1.2em;
+  width: 60%;
+}
+.easy-bank_card {
+  display: flex;
+  margin-top: 4em;
+  gap: 2em;
+}
+.easy-bank_card-header {
+  margin: 1em 0;
+}
+.easy-bank_card-paragraph {
+  line-height: 1.5em;
+  color: var(---Grayish-Blue);
+}
+/* easy bank section  end*/
+
+/* article section  start*/
+.article {
+  padding: 5% 10%;
+  background-color: var(---Very-Light-Gray);
+}
+.article-header {
+  font-size: 2.5em;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+.article-card {
+  display: flex;
+  gap: 1.2em;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+.card-grid-img {
+  grid-area: 1 / 1 / 2 / 2;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.card-grid-text {
+  grid-area: 2 / 1 / 3 / 2;
+  background-color: var(---White);
+  padding: 1em;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.article-card_author,
+.article-card_paragraph {
+  color: var(---Grayish-Blue);
+}
+.article-card_header {
+  font-size: 1.4em;
+  font-weight: 400;
+  margin: 1em 0;
+  cursor: pointer;
+}
+.article-card_header:hover {
+  color: var(---Lime-Green);
+}
+.currency-card_img {
+  background: url(./images/image-currency.jpg) center no-repeat;
+  background-size: cover;
+}
+.restaurant-card_img {
+  background: url(./images/image-restaurant.jpg) center no-repeat;
+  background-size: cover;
+}
+.plane-card_img {
+  background: url(./images/image-plane.jpg) center no-repeat;
+  background-size: cover;
+}
+.confetti-card_img {
+  background: url(./images/image-confetti.jpg) center no-repeat;
+  background-size: cover;
+}
+/* article section  end*/
+
+/* footer section start  */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 10%;
+  background-color: var(---Dark-Blue);
+}
+.footer-logo {
+  filter: invert(2) brightness(2) hue-rotate(200deg);
+}
+.footer-menu {
+  display: flex;
+  gap: 5em;
+}
+.footer-menu ul {
+  list-style: none;
+}
+.footer-menu ul a {
+  text-decoration: none;
+  color: var(---Light-Grayish-Blue);
+  line-height: 2;
+}
+.footer-menu ul a:hover {
+  color: var(---Lime-Green);
+}
+.footer_logo-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+.footer-socials {
+  display: flex;
+  gap: 1em;
+  cursor: pointer;
+}
+.footer-socials img:hover {
+  filter: invert(10%) sepia(18%) saturate(7446%) hue-rotate(75deg)
+    brightness(96%) contrast(72%);
+}
+.footer-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.copyright {
+  color: var(---Light-Grayish-Blue);
+}
+/* footer section end  */
+
+/* tablet breakpoint */
+
+@media screen and (max-width: 1200px) {
+  .invite-header,
+  .easy-bank_header {
+    font-size: 2em;
+  }
+  .invite-paragraph {
+    margin: 2em auto;
+  }
+  .invite-btn {
+    font-size: 1em;
+  }
+  .invite-bg {
+    right: -240px;
+    top: -130px;
+    height: 40em;
+  }
+  .invite-mockup {
+    right: -80px;
+    top: -70px;
+    height: 40em;
+  }
+  .easy-bank_card-img img {
+    height: 3em;
+  }
+  .easy-bank_card-header {
+    font-size: 1.2em;
+  }
+  .article-card_author,
+  .article-card_paragraph {
+    font-size: 0.8em;
+  }
+  .article-card_header {
+    font-size: 1em;
+  }
+}
+
+/* mobile breakpoint */
+@media screen and (max-width: 980px) {
+  #hamburger {
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    background-color: var(---White);
+    top: 70px;
+    width: 80%;
+    border-radius: 10px;
+    display: none;
+  }
+  .menu ul {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  .open {
+    display: block;
+  }
+  .request-btn {
+    display: none;
+  }
+  .invite-section {
+    text-align: center;
+    flex-direction: column-reverse;
+  }
+  .invite-text {
+    width: unset;
+  }
+  .invite-bg {
+    right: -150px;
+    height: 60em;
+    top: -380px;
+  }
+  .invite-mockup {
+    position: relative;
+    right: 0;
+    top: -120px;
+    height: 45em;
+  }
+  .easy-bank_text {
+    text-align: center;
+  }
+  .easy-bank_paragraph {
+    width: 100%;
+  }
+  .easy-bank_card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .article-card {
+    display: grid;
+  }
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-menu {
+    flex-direction: column;
+    gap: 0em;
+    margin: 1em 0;
+  }
+  .footer-socials img {
+    margin: 0 5px;
+  }
+}
